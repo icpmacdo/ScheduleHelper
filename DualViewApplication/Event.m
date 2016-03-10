@@ -39,7 +39,7 @@
 
 -(void)logEvent
 {
-    NSLog(@"\nThe event title is: %@\nThe event description is: %@\nThe event id: %i\nThe date: %@",_eventTitle,_eventDescription, _eventId, _eventDate);
+    NSLog(@"\n\nEvent title: %@\nEvent description: %@\nThe Event: %i\nEvent date: %@",_eventTitle,_eventDescription, _eventId, _eventDate);
     
 }
 
