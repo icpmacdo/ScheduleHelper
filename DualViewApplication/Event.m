@@ -13,7 +13,7 @@
 @implementation Event
 
 
-
+/*
 -(int)timesTen:(int)number{
     NSLog(@"You passed in the value %i", number);
     return number * 10;
@@ -22,7 +22,7 @@
 -(int)addNumber:(int)a toNumber:(int)b {
     return a + b;
 }
-
+*/
 // print method
 
 
@@ -37,11 +37,11 @@
 }
 
 
--(void)logEvent
-{
-    NSLog(@"\n\nEvent title: %@\nEvent description: %@\nThe Event: %i\nEvent date: %@",_eventTitle,_eventDescription, _eventId, _eventDate);
+//-(void)logEvent
+//{
+    //NSLog(@"\n\nEvent title: %@\nEvent description: %@\nThe Event: %i\nEvent date: %@",_eventTitle,_eventDescription, _eventId, _eventDate);
     
-}
+//}
 
 
  -(NSString*) getEventText {
@@ -55,7 +55,7 @@
      [formatter setTimeStyle:NSDateFormatterNoStyle];
      NSString *strEventDate = [formatter stringFromDate:_eventDate];
      
-     NSString* stringEverntInfoReturn = [NSString stringWithFormat:@"\nThe event title is: %@\nThe event description is: %@\nThe event id: %@\nThe date: %@",_eventTitle ,_eventDescription, strEventId, strEventDate];
+     NSString* stringEverntInfoReturn = [NSString stringWithFormat:@"\n\nThe event title is: %@\nThe event description is: %@\nThe event id: %@\nThe date: %@",_eventTitle ,_eventDescription, strEventId, strEventDate];
 
      return stringEverntInfoReturn;
 

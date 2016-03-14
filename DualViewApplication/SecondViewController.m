@@ -20,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // testing to see if declating is used for return key in text view
+    [_eventDescription setDelegate:self];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,14 +38,13 @@
 - (IBAction)addButton:(id)sender {
     if(![_eventTitle.text  isEqual: @""])
     {
-    _myEvent = [[Event alloc]init];
-    _myEvent.eventTitle = _eventTitle.text;
-    _myEvent.eventDescription = _eventDescription.text;
-    _myEvent.eventDate = _eventDate.date;
-    
-    
-    [self.delegate secondViewControllerDidFinish:self];
+        _myEvent = [[Event alloc]init];
+        _myEvent.eventTitle = _eventTitle.text;
+        _myEvent.eventDescription = _eventDescription.text;
+        _myEvent.eventDate = _eventDate.date;
+        [self.delegate secondViewControllerDidFinish:self];
     }
+    [self.view endEditing:YES];
 }
 
 - (IBAction)done:(id)sender
@@ -57,14 +58,12 @@
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    if([text isEqualToString:@"\n"]) {
+    if ([text isEqualToString:@"\n"]) {
+        //NSLog(@"Return pressed, do whatever you like here");
         [textView resignFirstResponder];
-        return YES;
+        return NO; // or true, whetever you's like
     }
-    
     return YES;
 }
-
 
 @end

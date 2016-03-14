@@ -26,7 +26,7 @@
 
 -(void)bringEventTitle:(NSString *) eventTitle bringEventDescription:(NSString *)eventDescription bringEventId:(int) eventId bringEventDate:(NSDate *) eventDate;
 
--(void)logEvent;
+//-(void)logEvent;
 
 -(NSString*)getEventText;
 
